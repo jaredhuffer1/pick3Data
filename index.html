@@ -1,60 +1,152 @@
-
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    
+    
+      <style>
+          /* Add your CSS styles here */
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+          }
 
-  <header>
-	<style>
-		body {
-		  font-family: Arial, sans-serif;
-		}
-	  
-		h1, h2 {
-		  text-align: center;
-		}
-	  
-		ul {
-		  list-style-type: none;
-		}
-	  
-		header, footer {
-		  background-color: #ccc;
-		  padding: 20px;
-		}
-	  
-		main {
-		  max-width: 800px;
-		  margin: 0 auto;
-		}
-	  
-		a {
-		  color: blue;
-		}
-	  </style>
-    <h1>Pick3Data</h1>
-  </header>
-  <main>
-    <p>Welcome to Pick3Data, your one-stop source for information on pick 3 lottery numbers in the USA.</p>
-    <h2>Latest Results</h2>
-    <p>Here are the latest pick 3 numbers from across the country:</p>
-    <ul>
-      <li>New York: 123</li>
-      <li>California: 456</li>
-      <li>Florida: 789</li>
-    </ul>
-    <h2>Tools and Resources</h2>
-    <p>In addition to tracking the latest pick 3 numbers, Pick3Data also offers a range of tools and resources to help you pick the right numbers and increase your chances of winning. Check out our number generator, past results database, and prediction system below:</p>
-    <ul>
-      <li><a href="number-generator.html">Number Generator</a></li>
-      <li><a href="past-results.html">Past Results Database</a></li>
-      <li><a href="prediction-system.html">Prediction System</a></li>
-    </ul>
-  </main>
-  <footer>
-    <p>Copyright 2022 Pick3Data</p>
-  </footer>
-</body>
+          .header {
+            background-color: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+          }
+
+          .header img {
+            height: 50px;
+          }
+
+          .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+          }
+
+          .nav-menu li {
+            margin: 0 10px;
+          }
+
+          .nav-menu a {
+            color: #333;
+            text-decoration: none;
+          }
+
+          .nav-menu a:hover {
+            color: #999;
+          }
+
+          .btn {
+            background-color: #333;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+          }
+
+          .btn:hover {
+            background-color: #666;
+          }
+          .pick3-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+  }
+
+  .pick3-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .pick3-section p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .pick3-section .winning-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .pick3-section .winning-numbers .state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    width: 150px;
+    text-align: center;
+  }
+
+  .pick3-section .winning-numbers .state h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .pick3-section .winning-numbers .state p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+        </style>
+      </head>
+      <body>
+        <header class="header">
+          <img src="pick3Data-logo.png" alt="Pick3Data logo" />
+          <nav>
+            <ul class="nav-menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <button class="btn" onclick="window.location.href='signup.html'">
+            Sign Up
+          </button>
+          <button class="btn" onclick="window.location.href='login.html'">
+            Log In
+          </button>
+        </header>
+        <section class="pick3-section">
+          <h2>Pick3Data</h2>
+          <p>Our program reduces the odds of winning Pick3 in the United States by analyzing past winning numbers and predicting which numbers are most likely to be drawn next. With Pick3Data, you can increase your chances of hitting the jackpot and bringing home the cash!</p>
+          <div class="winning-numbers">
+            <div class="state">
+              <h3>California</h3>
+              <p>9-1-7</p>
+            </div>
+            <div class="state">
+              <h3>New York</h3>
+              <p>2-5-6</p>
+            </div>
+            <div class="state">
+              <h3>Florida</h3>
+              <p>4-8-3</p>
+            </div>
+            <div class="state">
+              <h3>Texas</h3>
+              <p>6-0-2</p>
+            </div>
+          </div>
+        </section>
+        </body>
+    </html>
+  </head>
 </html>
