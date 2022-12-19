@@ -4,146 +4,267 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    
-    
-      <style>
-          /* Add your CSS styles here */
-          body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-          }
+    <title>Pick3Data</title>
+    <style>
+      /* Add your CSS styles here */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
 
-          .header {
-            background-color: #333;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
-          }
+      .header {
+        background-color: #333;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+      }
+      .header-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+      }
 
-          .header img {
-            height: 50px;
-          }
+      .header img {
+        height: 50px;
+      }
 
-          .nav-menu {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-          }
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
 
-          .nav-menu li {
-            margin: 0 10px;
-          }
+      .btn {
+        background-color: #333;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
 
-          .nav-menu a {
-            color: #333;
-            text-decoration: none;
-          }
+      .btn:hover {
+        background-color: #666;
+      }
 
-          .nav-menu a:hover {
-            color: #999;
-          }
+      .pick3-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+      }
 
-          .btn {
-            background-color: #333;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-          }
+      .pick3-section h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
 
-          .btn:hover {
-            background-color: #666;
-          }
-          .pick3-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #f2f2f2;
-    border-radius: 10px;
+      .pick3-section p {
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .pick3-section .winning-numbers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .pick3-section .winning-numbers .state {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        width: 150px;
+        text-align: center;
+      }
+
+      .pick3-section .winning-numbers .state h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      .pick3-section .winning-numbers .state p {
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+      }
+
+      .footer-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .footer-menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .footer-menu li {
+        margin-left: 10px;
+      }
+
+      .footer-menu a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .footer-menu a:hover {
+        color: #666;
+      }
+      aside select {
+  width: 100%; /* make the drop-down menu take up the full width of the aside element */
+  font-size: 1em; /* set the font size */
+  padding: 0.5em; /* add some padding to the drop-down menu */
+  border: 1px solid #ccc; /* add a border */
+  border-radius: 4px; /* round the corners of the border */
+}
+
+/* make the drop-down menu look good on mobile devices */
+@media (max-width: 480px) {
+  aside select {
+    width: 100%; /* make the drop-down menu take up the full width of the aside element */
+    font-size: 0.8em; /* set the font size to be slightly smaller on mobile devices */
   }
+}
 
-  .pick3-section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  .pick3-section p {
-    font-size: 18px;
-    line-height: 1.5;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .pick3-section .winning-numbers {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  .pick3-section .winning-numbers .state {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-    width: 150px;
-    text-align: center;
-  }
-
-  .pick3-section .winning-numbers .state h3 {
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-
-  .pick3-section .winning-numbers .state p {
-    font-size: 14px;
-    margin-bottom: 0;
-  }
-        </style>
-      </head>
-      <body>
-        <header class="header">
-          <img src="pick3Data-logo.png" alt="Pick3Data logo" />
-          
-         
-          <button class="btn" onclick="window.location.href='signup.html'">
-            Sign Up
-          </button>
-          <button class="btn" onclick="window.location.href='login.html'">
-            Log In
-          </button>
-        </header>
-        <section class="pick3-section">
-          <h2>Pick3Data</h2>
-          <p>Our program reduces the odds of winning Pick3 in the United States by analyzing past winning numbers and predicting which numbers are most likely to be drawn next. With Pick3Data, you can increase your chances of hitting the jackpot and bringing home the cash!</p>
-          <h2>Past Winning Nubers</h2>
-          <div class="winning-numbers">
-            <div class="state">
-             
-              <h3>California</h3>
-              <p>9-1-7</p>
-            </div>
-            <div class="state">
-              <h3>New York</h3>
-              <p>2-5-6</p>
-            </div>
-            <div class="state">
-              <h3>Florida</h3>
-              <p>4-8-3</p>
-            </div>
-            <div class="state">
-              <h3>Texas</h3>
-              <p>6-0-2</p>
-            </div>
-          </div>
-        </section>
-        </body>
-    </html>
+    </style>
   </head>
+  <body>
+    <header class="header">
+      <div class="header-wrapper">
+        <img src="pick3Data-logo.png" alt="Pick3Data logo" />
+        <button class="btn" onclick="window.location.href='signup.html'">
+          Sign Up
+        </button>
+        <button class="btn" onclick="window.location.href='login.html'">
+          Login
+        </button>
+      </div>
+    </header>
+    <aside>
+      <h2>States</h2>
+      <select>
+        <option value="al">Alabama</option>
+        <option value="ak">Alaska</option>
+        <option value="az">Arizona</option>
+        <option value="ar">Arkansas</option>
+        <option value="ca">California</option>
+        <option value="co">Colorado</option>
+        <option value="ct">Connecticut</option>
+        <option value="de">Delaware</option>
+        <option value="fl">Florida</option>
+        <option value="ga">Georgia</option>
+        <option value="hi">Hawaii</option>
+        <option value="id">Idaho</option>
+        <option value="il">Illinois</option>
+        <option value="in">Indiana</option>
+        <option value="ia">Iowa</option>
+        <option value="ks">Kansas</option>
+        <option value="ky">Kentucky</option>
+        <option value="la">Louisiana</option>
+        <option value="me">Maine</option>
+        <option value="md">Maryland</option>
+        <option value="ma">Massachusetts</option>
+        <option value="mi">Michigan</option>
+        <option value="mn">Minnesota</option>
+        <option value="ms">Mississippi</option>
+        <option value="mo">Missouri</option>
+        <option value="mt">Montana</option>
+        <option value="ne">Nebraska</option>
+        <option value="nv">Nevada</option>
+        <option value="nh">New Hampshire</option>
+        <option value="nj">New Jersey</option>
+        <option value="nm">New Mexico</option>
+        <option value="ny">New York</option>
+        <option value="nc">North Carolina</option>
+        <option value="nd">North Dakota</option>
+        <option value="oh">Ohio</option>
+        <option value="ok">Oklahoma</option>
+        <option value="or">Oregon</option>
+        <option value="pa">Pennsylvania</option>
+        <option value="ri">Rhode Island</option>
+        <option value="sc">South Carolina</option>
+        <option value="sd">South Dakota</option>
+        <option value="tn">Tennessee</option>
+        <option value="tx">Texas</option>
+        <option value="ut">Utah</option>
+        <option value="vt">Vermont</option>
+        <option value="va">Virginia</option>
+        <option value="wa">Washington</option>
+        <option value="wv">West Virginia</option>
+        <option value="wi">Wisconsin</option>
+        <option value="wy">Wyoming</option>
+      </select>
+    </aside>
+    
+    
+    <main>
+      <section class="pick3-section">
+        <h2>Pick3Data</h2>
+        <p>
+          Welcome to Pick3Data, your one-stop source for Pick3 winning numbers
+          from various states.
+        </p>
+        <div class="winning-numbers">
+          <div class="state">
+            <h3>State 1</h3>
+            <p>123</p>
+            <p>456</p>
+            <p>789</p>
+          </div>
+          <div class="state">
+            <h3>State 2</h3>
+            <p>246</p>
+            <p>135</p>
+            <p>798</p>
+          </div>
+          <div class="state">
+            <h3>State 3</h3>
+            <p>369</p>
+            <p>159</p>
+            <p>753</p>
+          </div>
+        </div>
+      </section>
+      <!-- Add a side bar for past winning numbers -->
+      
+      
+    
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <p>Copyright 2021 Pick3Data</p>
+        <ul class="footer-menu">
+          <li>
+            <a href="#">Terms of Use</a>
+          </li>
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
